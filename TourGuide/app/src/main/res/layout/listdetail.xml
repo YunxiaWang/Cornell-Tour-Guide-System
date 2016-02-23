@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:fitsSystemWindows="true"
+android:layout_height="match_parent"
+android:windowTranslucentStatus="true"
+android:windowTranslucentNavigation="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/detail_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/keyline2"
+        android:paddingEnd="@dimen/keyline3"
+        android:paddingTop="@dimen/standard_margin"
+        android:paddingBottom="@dimen/standard_margin"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textIsSelectable="true"
+            style="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/detail_start_time_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/date_icon"/>
+        <TextView
+            android:id="@+id/detail_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:text="Start Time"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="?android:textAppearanceSmall"/>
+        <ImageView
+            android:id="@+id/detail_end_time_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/date_icon"/>
+        <TextView
+            android:id="@+id/detail_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Time"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="?android:textAppearanceSmall"/>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/detail_end_time_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="70dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/date_icon"/>
+        <TextView
+            android:id="@+id/detail_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Time"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="?android:textAppearanceSmall"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/detail_location_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/location_icon"/>
+        <TextView
+            android:id="@+id/detail_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="?android:textAppearanceSmall"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/detail_category_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/category_icon"/>
+        <TextView
+            android:id="@+id/detail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="?android:textAppearanceSmall"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:paddingTop="@dimen/standard_margin"
+        android:paddingBottom="@dimen/standard_margin"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false">
+        <TextView
+            android:id="@+id/detail_description"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textIsSelectable="true"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:paddingStart="@dimen/keyline2"
+            android:paddingEnd="@dimen/keyline3" />
+    </ScrollView>
+
+</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/map_location"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/map_icon"
+        android:scaleType="centerCrop"
+        app:layout_anchor="@id/detail_title_bar"
+        app:layout_anchorGravity="bottom|start"
+        app:rippleColor="@color/colorAccent"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:clickable="true" />
+
+</android.support.design.widget.CoordinatorLayout>
